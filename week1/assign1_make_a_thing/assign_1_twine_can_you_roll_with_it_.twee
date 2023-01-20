@@ -1,0 +1,496 @@
+:: StoryTitle
+Can you roll with it?
+
+
+:: StoryData
+{
+  "ifid": "A3359C8C-C361-43EC-A6C7-01B0C668DC61",
+  "format": "Harlowe",
+  "format-version": "3.3.4",
+  "start": "start",
+  "zoom": 0.6
+}
+
+
+:: Bon appétit!!! 🤗 {"position":"900,1000","size":"100,100"}
+Wow! Deliciously A-ma-zing!
+
+Thank you everyone for attending my workshop! I hope you had fun and stay tuned for the next workshop!
+
+Now let's enjoy the food! Bon Appétit! 😌
+
+[[Finish eating!!! 🥳->start]]
+
+
+:: Hmm...Is it free? 🤔 {"position":"700,0","size":"100,100"}
+Yes, it is dear.
+
+[[All right, let's gooo!! 🤩 ->ingredients]]
+
+
+:: No-no this is the right room 😳 {"position":"300,200","size":"100,100"}
+Oh? Okay, did you not know that this workshop is about?
+
+[[Uh...yeah...sorry, can you please inform me about- ->intro]]
+
+[[Yes, I do! It's my coding class!!]]
+
+
+:: Nooo... 😭 {"position":"400,300","size":"100,100"}
+All right...OUT OF MY WORKSHOP! You have wasted enough time!
+
+GAME OVER
+
+[[gO BacK AnD ReSTart->start]]
+
+
+:: Nooo...Please tell me more!!! 😭 {"position":"500,500","size":"100,100"}
+Gosh no! We'll save that for next time and please don't ask how I know this. It is part of my cultural knowledge. If you are so impatient, then Google it!!!
+
+[[Nooo... 😭]]
+
+[[All right, time to roll! 😤->ingredients]]
+
+
+:: Oh...then can I still attend this workshop? 🤔 {"position":"325,550","size":"100,100"}
+Yes, of course!! Come on in and join us!
+
+[[Attend the workshop 🤭->intro]]
+
+
+:: Uh...I think so? 😵 {"position":"0,500","size":"100,100"}
+Haha, all right. Please kindly exit this room and ask the receptionist for the right one! 
+
+Thank you for coming!
+
+GAME OVER
+
+[[gO BacK AnD ReSTart->start]]
+
+
+:: What?? The year of the Cat?? 🙀 {"position":"550,100","size":"100,100"}
+Yes! Indeed, the year of Cat exist. There is a slight difference between both animal zodiac symbol. While one represents Chinese New Year and the other represents Vietnamese New Year. 
+
+A-ha-ahem, in Chinese culture, the Rabbit is the fourth in the twelve-year cycle of animals that appear in the Chinese zodiac related to the Chinese calendar. It is a symbol of longevity, peace and prosperity.
+
+Taking place of the Rabbit in the Chinese zodiac, the Cat is the 4th animal symbol in the 12-year cycle of the Vietnamese zodiac and Gurung zodiac. Additionally, in the Malay zodiac, the mousedeer takes the place of the rabbit.
+
+As such, the traits associated with the Rabbit are attributed to the Cat. However, Cats are in conflict with the Rat. Since cats are the natural enemy of rats, Vietnamese farmers believed cats could bring prosperous harvests and good weather, and therefore replaced rabbit with cat in their zodiac signs.
+
+Also, the Rabbit zodiac and Cat zodiac have similar pronounciation sound therefo-Wait a minute! This isn't the time for a History class!!! Let's get moving and roll some spring rolls!! 
+
+[[Nooo...Please tell me more!!! 😭]]
+
+[[Awn, all righttt let's roll some delicious food!! 🤤 ->ingredients]]
+
+
+:: Yes, I do! It's my coding class!! {"position":"200,400","size":"100,100"}
+Oh dear me! No, this is a cooking class! The coding class was yesterday!
+
+[[Oh...Ohhh....noooo...I missed it... 😭->gameover]]
+
+[[Oh...then can I still attend this workshop? 🤔]]
+
+
+:: argueforcarrot {"position":"1825,450","size":"100,100"}
+Okay, then kindly leave my workshop.
+
+[[Uh...no...sorry...I'll wash it 😖->washcarrot]]
+
+[[Ugh, whatever. It's just a carrot! 😤->gameover]]
+
+
+:: carrot {"position":"1800,200","size":"100,100"}
+(if:$cookedvermicelli and $cookedshrimp is true)[All right, while waiting for the cooked ingredients to cool, let's chop our carrot! 
+Please wash the carrot before cutting and-(set:$carrot to true)
+
+[[Wash the carrot 🤗->washcarrot]]
+
+[[Eat the unwashed carrot 🤤->eatrawcarrot]]](else:)[You should prepare the vermicelli and shrimp first! (set:$carrot to false)
+
+[[Go back to ingredients->ingredients]]]
+
+
+
+
+
+:: cook {"position":"2450,150","size":"100,100"}
+All right! Let's rinse it and let it cool for 5 minutes. (set: $cookedvermicelli to true)
+
+[[Rinse and let the noodles cool down 🤗->ingredients]]
+
+
+:: cookagain {"position":"2125,325","size":"100,100"}
+All right! Let's let the beautifully cooked orange shrimp cool for 5 minutes. (set: $cookedshrimp to true)
+
+[[Drain the boiled water and let the shrimp dry up a bit ->ingredients]]
+
+
+:: crushedpeanut {"position":"1200,1000","size":"100,100"}
+Nicely done, everyone! Your Ziploc bags are in a fairly good state! (set:$crushedpeanut to true)
+
+[[Time to complete the dipping sauce! 🤗->makesauce]]
+
+
+:: dippingsauce {"position":"1600,950","size":"100,100"}
+Nicely done, everyone! Your small bowl of dipping sauce looks wonderful! (set:$dippingsauce to true)
+
+[[Time taste your master piece! 🤤->ingredients]]
+
+
+:: drylettuce {"position":"1375,550","size":"100,100"}
+Nicely done, everyone! (set:$washedlettuce to true)
+
+Finally, we're ready to roll them spring rolls!
+
+[[Yay! 🤩->ingredients]]
+
+
+:: eatcarrot {"position":"1725,550","size":"100,100"}
+REALLY?!
+
+[[Sorry! I'm hungry...😬->gameover]]
+
+[[Haha...I'm kidding! 😅->slicecarrot]]
+
+
+:: eatraw {"position":"2500,0","size":"100,100"}
+WHAT ARE YOU DOING?!
+
+Don't eat it raw!! You'll get a stomachache!! 
+
+[[Go cook the noodles 😖->vermicelli]]
+
+[[RUN AWAY 😖->gameover]]
+
+
+:: eatrawagain {"position":"2225,225","size":"100,100"}
+OI, DO YOU WANT A STOMACHACHE?!
+
+Don't eat it raw!! Not especially packaged seafood!!!
+
+[[Go cook the shrimps 😖->shrimp]]
+
+[[RUN AWAY 😖->gameover]]
+
+
+:: eatrawcarrot {"position":"1900,300","size":"100,100"}
+*glares disgustingly*
+
+[[Uh...sorry...I'll wash it 😖->washcarrot]]
+
+[[A carrot can still be eaten raw, okay?! 😤->argueforcarrot]]
+
+
+:: eatrawricepaper {"position":"1200,400","size":"100,100"}
+You can eat raw rice paper but it's better to soften it with water.
+
+[[Oh...Okay! 🤪->gameover]]
+
+[[Oh! I didn't know that! I'll try it later! 😮 ->rollstep1]]
+
+
+:: gameover {"position":"300,1100","size":"100,100"}
+GAME OVER
+
+SYSTEM: Can you just follow through the tutorial properly?
+SYSTEM: Try again...
+
+[[gO BacK AnD ReSTart->start]]
+
+
+:: gameoverr {"position":"500,1100","size":"100,100"}
+GAME OVER
+
+SYSTEM: You have been kicked out of the workshop...for act of violence...
+SYSTEM: Try again...
+
+[[gO BacK AnD ReSTart->start]]
+
+
+:: ingredients {"position":"1375,75","size":"100,100"}
+(if:visits is 0) [(set:$cookedvermicelli and $cookedshrimp and $slicedcarrot and $washedlettuce and $wetricepaper to false)]All right, everyone gather around your station! On your table, you will see a few ingredients that I have prepared for today's workshop. So you see we have the main ingredients:
+
+[[- A pack of rice paper ⚪️->rice paper]]
+[[- A pack of vermicelli 🍜->vermicelli]]
+[[- A pack of shrimp 🍤->shrimp]]
+[[- One carrot 🥕->carrot]]
+[[- One lettuce 🥬->lettuce]]
+
+So let's start by cooking some of our ingredients!
+
+(if:$cookedvermicelli is true) [(You have some cooked rice noodles)]
+(if:$cookedshrimp is true) [(You have some cooked shrimps)]
+(if:$slicedcarrot is true) [(You have some sliced carrots)]
+(if:$washedlettuce is true)[(You have some washed lettuce leaves)]
+(if:$wetricepaper is true) [(You have dipped your rice paper in water)]
+
+(if:$springroll is true )[[It's time for the final and crucial part of our workshop!! 😉->makesauce]]
+(if:$dippingsauce is true) [[Bon appétit!!! 🤗]]
+
+
+:: intro {"position":"625,250","size":"100,100"}
+Haha, this workshop is a family-friendly cooking tutorial for anyone who wants to learn how to make spring rolls! After all, Lunar New Year 2023 is coming really soon on January 20th!
+
+As last year was the year of the Tiger, this year is the year of the Rabbit! It is also the year of the Cat! So as a special activity, you can make your own spring rolls anywhere with your family, friends and others!
+
+So are you ready?
+
+[[Yeah! I'm ready to learn! 🤩->ingredients]]
+
+[[Hmm...Is it free? 🤔]]
+
+[[What?? The year of the Cat?? 🙀]]
+
+
+:: lettuce {"position":"1475,300","size":"100,100"}
+(if:$cookedvermicelli and $cookedshrimp and $slicedcarrot is true)[Almost there everyone! Let's wash our lettuce. 
+Careful! Please make sure to rinse the dirt off of the lettuce's leaves(set:$lettuce to true)
+
+[[Wash the lettuce carefully 🤗->washlettuce]]
+
+[[Shake the lettuce and hold it like Simba, the Lion 🤪->sillyact]]](else:)[You should prepare the vermicelli, shrimp and carrot first! (set:$lettuce to false)
+
+[[Go back to ingredients->ingredients]]]
+
+
+
+
+:: makesauce {"position":"1325,750","size":"100,100"}
+(if:visits is 0) [(set:$crushedpeanut and $dippingsauce to false)]Yes, making the spring rolls are important! BUT we shouldn't forget its dipping sauce!!
+
+One more push everyone and you can taste your masterpieces!!! Please make the dipping sauce by using the following ingredients:
+
+[[- A small bag of peanuts 🥜->peanut]]
+[[- A bottle of Hoisin sauce 🧂->sauce]]
+
+(if:$crushedpeanut is true) [(You have some crushed peanuts)]
+(if:$dippingsauce is true) [(You have some dipping sauce)]
+
+(else:)[[[NOOOO...no more...I'm dying of hunger 😭->gameover]]]
+
+
+:: paperbreak {"position":"1050,500","size":"100,100"}
+Oh no! The rice paper broke since you didn't put the lettuce leaf before other ingredients!! Please redo it!
+
+[[Arghhh nooo 😱->rollstep1]]
+
+
+:: peanut {"position":"1325,875","size":"100,100"}
+Let's start off by crushing these peanuts into pieces. You can crush them real thin and small or divide them in a half! 
+
+Use the spoon beside you and beat up these peanuts after putting them in the provided Ziploc bag. Keep in mind that if you hit the bag to hard and too much it might break the bag...
+
+[[Crush them into small pieces 😯->crushedpeanut]]
+
+[[Divide them in half or so 😯->crushedpeanut]]
+
+[[Hammer the bag because of hangriness 😤->gameoverr]]
+
+
+:: peanutoverdose {"position":"1600,800","size":"100,100"}
+That's too much, dear. Now, you have to take the excess of the peanut topping out of the sauce and put it on aside.
+
+What a waste...tsk tsk tsk...
+
+[[...->gameoverr]]
+
+[[Uhh...->makesauce]]
+
+
+:: rice paper {"position":"1225,275","size":"100,100"}
+(if:$cookedvermicelli and $cookedshrimp and $slicedcarrot and $washedlettuce is true)[All right, let's proceed to dampen the rice paper to soften it. Then you should place it on your plate. (set:$ricepaper to true)
+
+[[Dip a rice paper in the bowl of warm water 🤗->rollstep1]]
+
+[[Take a bite of the dry rice paper 🤤->eatrawricepaper]]](else:)[You cannot dip the rice paper in the water without preparing the other ingredients first! (set:$ricepaper to false)
+
+[[Go back to ingredients->ingredients]]]
+
+
+:: rollstep1 {"position":"1025,325","size":"100,100"}
+Nice! Make sure to not put to much water on the paper since it will stick to the plate.
+
+Quick! Add the ingredients in the following order: (set:$springroll to false)
+
+Lettuce > Vermicelli > Carrots > Shrimp
+
+[[Add lettuce > vermicelli > carrots > shrimp->rollstep2]]
+
+[[Add vermicelli >lettuce > carrots > shrimp->paperbreak]]
+
+[[Add carrots > vermicelli >lettuce > shrimp->paperbreak]]
+
+[[Add shrimp >lettuce > carrots > vermicelli ->paperbreak]]
+
+
+:: rollstep2 {"position":"1000,175","size":"100,100"}
+Nice! Careful to wrap it up too tight but just enough so the spring roll won't be too loose either! (set:$springroll to false)
+
+[[[Carefully wrap everything up! 🤔->ingredients]](set:$springroll to true)]
+
+[[Don't put too much pressure 🤗->weirdspringroll]]
+
+
+:: sauce {"position":"1450,875","size":"100,100"}
+(if:$crushedpeanut is true)[Please add some Hoisin sauce into the small sauce bowl. All you need to do now is add the crushed peanuts in the Hoisin sauce! 
+
+What is Hoisin sauce? Well it is a thick, fragrant sauce commonly used in Cantonese cuisine as a glaze for meat, an addition to stir fry, or as dipping sauce. It is dark-coloured in appearance and sweet and salty in taste.(set:$sauce to true)
+
+[[Add all of the crushed peanuts into the sauce!!! 🤤->peanutoverdose]]
+
+[[Add half of the crushed peanut bag's amount 😯->dippingsauce]]](else:)[Please crush your topping first! (set:$sauce to false)
+
+[[Go back to ingredients->ingredients]]]
+
+
+:: shrimp {"position":"2025,125","size":"100,100"}
+Now, let's cook our delicious shrimps!
+
+Please put all of the shrimps into the second pot of cold water and cook it for 5 minutes.
+
+[[Turn on the second stove and cook the shrimps 😯->cookagain]]
+
+[[Try to eat a shrimp 🥴->eatrawagain]]
+
+
+:: sillyact {"position":"1550,450","size":"100,100"}
+*shoots death glare*
+
+[[Ahaha...okay...sorry 😖->washlettuce]]
+
+[[RUN AWAY 😖->gameover]]
+
+
+:: slicecarrot {"position":"1800,700","size":"100,100"}
+Nice, everyone! Very nice, I see that everyone can do thin slicing! (set:$slicedcarrot to true)
+
+[[Hehe, what's next? 🤩->ingredients]]
+
+
+:: start {"position":"75,0","size":"100,100"}
+Hello there fellow friend!
+
+Are you ready to start our workshop?
+
+[[✦ HECK YEAH! Let's get it rolling!! 🤩]]
+
+[[✦ Wait, what workshop??? 😳]]
+
+(set:$cookedvermicelli to false)
+(set:$cookedshrimp to false)
+(set:$slicedcarrot to false)
+(set:$washedlettuce to false)
+(set:$wetricepaper to false)
+(set:$springroll to false)
+(set:$dippingsauce to false)
+
+
+:: vermicelli {"position":"2300,0","size":"100,100"}
+Let's cook our vermicelli!
+
+For those who don't know what it is, vermicelli is a type of rice noodle.
+
+Please take out half of the amount in the vermicelli pack and put them in the pot of cold water. Then cook it for 5-10 minutes.
+
+[[Turn on the stove and cook the noodles 😯->cook]]
+
+[[Eat the noodles to taste its rawness 🥴->eatraw]]
+
+
+:: washcarrot {"position":"1700,350","size":"100,100"}
+Please dry it up and have it ready to be sliced into thick strings.
+
+[[Slice the carrot using a peeler and knife 😯->slicecarrot]]
+
+[[Eat the washed carrot 🤤->eatcarrot]]
+
+
+:: washlettuce {"position":"1375,425","size":"100,100"}
+All right, everyone! Let's dry it up by shaking it a little bit in the sink!
+
+[[Dry it up careful 😯->drylettuce]]
+
+[[Blow dry the lettuce by throwing it- 🤪->sillyact]]
+
+
+:: weirdspringroll {"position":"900,450","size":"100,100"}
+Oh dear, you didn't put enough pressure to careful wrap the roll up! Try again, dear!
+
+[[...okay but I'll eat this after I get it right! 🤭->rollstep1]]
+
+
+:: ✦ HECK YEAH! Let's get it rolling!! 🤩 {"position":"200,0","size":"100,100"}
+All right! That's the spirit! Love the energy!
+
+Though, do you know what the workshop is about? 
+
+[[✦ No clue but let's get the bread! 🤭 ->intro]]
+
+[[✦ Uh..what is it about? 😅->intro]]
+
+
+:: ✦ Wait, what workshop??? 😳 {"position":"100,200","size":"100,100"}
+Oh? Did you enter the wrong room?
+
+[[No-no this is the right room 😳]]
+
+[[Uh...I think so? 😵]]
+
+
+:: StoryStylesheet [stylesheet]
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Coiny&family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  /* Hide anything that goes off the window size */
+  overflow: hidden;
+  /* Gradient background */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+tw-story::-webkit-scrollbar {
+  display: none;
+}
+
+tw-story {
+   
+    font: 100% 'Montserrat', sans-serif;
+    width: 100vh;
+ 	height: 100vh;
+    min-height: none;
+  	border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    padding: 10% 5%;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  	overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #000;
+    color: #fff;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

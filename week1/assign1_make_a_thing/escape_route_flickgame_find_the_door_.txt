@@ -1,0 +1,5 @@
+Escape Route:
+
+b1 r2 b3 g5 p9 lightp8 b15 r11 p12 13
+
+b1 r2 o3 b6 o4 o7 lightp8 b15 r11 p12 13
