@@ -44,6 +44,10 @@ body {
   background-color: #fcecdf;
 }
 
+.indent {
+  padding-left: 2%;
+}
+
 h1 {
   font-family: 'Libre Baskerville', 'Times New Roman', georgia, serif;
   line-height: 4rem;
